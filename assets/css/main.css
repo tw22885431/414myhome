@@ -1675,7 +1675,7 @@
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #000000;
+			color: #000000 !important;
 		}
 
 	strong, b {
