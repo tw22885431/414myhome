@@ -1677,7 +1677,7 @@
 
 	body, input, select, textarea {
 		color: #585858;
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-family: "Source Sans Pro", Helvetica, sans-serif ;
 		font-size: 16pt;
 		font-weight: 100%;
 		line-height: 1.75;
@@ -2152,7 +2152,7 @@
 		}
 
 
-	input[type="text"],
+
 	input[type="password"],
 	input[type="email"],
 	input[type="tel"],
@@ -2174,7 +2174,7 @@
 		width: 100%;
 	}
 
-		input[type="text"]:invalid,
+		
 		input[type="password"]:invalid,
 		input[type="email"]:invalid,
 		input[type="tel"]:invalid,
@@ -2183,7 +2183,7 @@
 			box-shadow: none;
 		}
 
-		input[type="text"]:focus,
+		
 		input[type="password"]:focus,
 		input[type="email"]:focus,
 		input[type="tel"]:focus,
@@ -2226,7 +2226,7 @@
 			display: none;
 		}
 
-	input[type="text"],
+
 	input[type="password"],
 	input[type="email"],
 	select {
@@ -2251,42 +2251,7 @@
 		z-index: -1;
 	}
 
-		input[type="radio"] + label {
-			text-decoration: none;
-			color: #585858;
-			cursor: pointer;
-			display: inline-block;
-			font-size: 1em;
-			font-weight: 300;
-			padding-left: 2.55em;
-			padding-right: 0.75em;
-			position: relative;
-		}
-
-			input[type="radio"] + label:before {
-				-moz-osx-font-smoothing: grayscale;
-				-webkit-font-smoothing: antialiased;
-				font-family: FontAwesome;
-				font-style: normal;
-				font-weight: normal;
-				text-transform: none !important;
-			}
-
-			input[type="radio"] + label:before {
-				border-radius: 4px;
-				border: solid 1px #c9c9c9;
-				content: '';
-				display: inline-block;
-				height: 1.8em;
-				left: 0;
-				line-height: 1.725em;
-				position: absolute;
-				text-align: center;
-				top: 0;
-				width: 1.8em;
-			}
-
-
+		
 /* Box */
 
 	.box {
@@ -3406,6 +3371,7 @@
 					}
 
 		}
+.SelectAll input{vertical-align:middle; margin-bottom:2px; *margin-bottom:2px;}
 
 /* Wrapper */
 
@@ -3423,3 +3389,62 @@
 			}
 
 		}
+.checkbox label:after, 
+.radio label:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.checkbox .cr,
+.radio .cr {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #a9a9a9;
+    border-radius: .25em;
+    width: 1.0em;
+    height: 1.0em;
+    float: left;
+    margin-right: .4em;
+	margin-top: .3em;
+}
+
+.radio .cr {
+    border-radius: 50%;
+}
+
+.checkbox .cr .cr-icon,
+.radio .cr .cr-icon {
+    position: absolute;
+    font-size: .8em;
+    line-height: 0;
+    top: 50%;
+    left: 20%;
+}
+
+.radio .cr .cr-icon {
+    margin-left: 0.04em;
+}
+
+.checkbox label input[type="checkbox"],
+.radio label input[type="radio"] {
+    display: none;
+}
+
+.checkbox label input[type="checkbox"] + .cr > .cr-icon,
+.radio label input[type="radio"] + .cr > .cr-icon {
+    transform: scale(3) rotateZ(-20deg);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon,
+.radio label input[type="radio"]:checked + .cr > .cr-icon {
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+}
+
+.checkbox label input[type="checkbox"]:disabled + .cr,
+.radio label input[type="radio"]:disabled + .cr {
+    opacity: .5;
+}

@@ -7,7 +7,7 @@
 <html><head>
 		<title>414My Home</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -66,9 +66,9 @@
 				
 				color: aliceblue !important;
 				
-				text-align: center;
+				text-align: center !important;
 				
-				font-size: 30px;
+				font-size: 30px !important;
 			}
 			
 			.modal-footer{
@@ -82,6 +82,7 @@
 				border: none;
 				
 			}
+			
 			
 			
         </style>
@@ -104,18 +105,21 @@
           											<h4><span class="glyphicon glyphicon-lock"></span> 登入</h4>
         										</div>
         										<div class="modal-body"style = "padding: 40px 50px">
-          								          <form role="form">
+          								          <form id="form">
             									      <div class="form-group">
               									  		<label for="usrname"><span class="glyphicon glyphicon-user"></span> 帳號</label>
-              									  		<input type="text" class="form-control" id="usrname" placeholder="用戶名/E-Mail">
+              									  		<input type="text" class="form-control" id="usr" placeholder="用戶名/E-Mail">
             									  	  </div>
             								    	  <div class="form-group">
               											<label for="psw"><span class="glyphicon glyphicon-eye-open"></span> 密碼</label>
               											<input type="text" class="form-control" id="psw" placeholder="密碼">
             										  </div>
-            										  <div class="checkbox">
-              											<label><input type="checkbox" value="" checked>Remember me</label>
-            										  </div>
+            										  	    <div class="checkbox">
+              													<label>
+            														<input type="checkbox" value="" checked>
+            															<span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>Remember me
+       														  </label>
+            										  		</div>
           										   </form>	
         										</div>
         										<div class="modal-footer">
