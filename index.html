@@ -17,6 +17,7 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<style type = "text/css">
+			
 			.navbar-center{
 				
 				display: inline-block;
@@ -39,12 +40,6 @@
 				
 			}
 			
-			.btn-success{
-				
-				background-color: aqua;
-				
-			}
-			
 			.navbar {
 				
 				position: relative;
@@ -59,6 +54,34 @@
   
 			}
 			
+			.navbar-inverse{
+				
+				background-color: #C7B8DF ;
+				
+			}
+			
+			.modal-header,h4, .close{
+				
+				background-color:rebeccapurple;
+				
+				color: aliceblue !important;
+				
+				text-align: center;
+				
+				font-size: 30px;
+			}
+			
+			.modal-footer{
+				
+				background: #f9f9f9;
+				
+			}
+			
+			.btn{
+				
+				border: none;
+				
+			}
 			
 			
         </style>
@@ -66,14 +89,47 @@
 	<body>
 		<!-- Wrapper -->
 			<div id="wrapper">
-
-				<nav class="navbar navbar-inverse">
-  					<div class="container-fluid">
-    					<ul class="nav navbar-nav navbar-right">
-     						 <li><button class="btn btn-default" type="submit" ><span class="glyphicon glyphicon-log-in">Search</span></button></li>
-     						 <li><button class="btn btn-success" type="submit">Search</button></li>
-      					</ul>
- 					 </div>
+				<nav class="navbar navbar-inverse" role = "navigation">
+ 					<div class="container-fluid">
+  						<div class="collaps navbar-collapse navbar-right">
+    						<ul class="nav navbar-nav">
+     							 <li><a href="#myModal" data-toggle = "modal">登入</a></li>
+     							 <div class="modal fade" id="myModal" role="dialog">
+    								<div class="modal-dialog">
+    
+      									<!-- Modal content-->
+      									<div class="modal-content">
+        										<div class="modal-header" style="padding: 20px 50px">
+          											<button type="button" class="close" data-dismiss="modal">&times;</button>
+          											<h4><span class="glyphicon glyphicon-lock"></span> 登入</h4>
+        										</div>
+        										<div class="modal-body"style = "padding: 40px 50px">
+          								          <form role="form">
+            									      <div class="form-group">
+              									  		<label for="usrname"><span class="glyphicon glyphicon-user"></span> 帳號</label>
+              									  		<input type="text" class="form-control" id="usrname" placeholder="用戶名/E-Mail">
+            									  	  </div>
+            								    	  <div class="form-group">
+              											<label for="psw"><span class="glyphicon glyphicon-eye-open"></span> 密碼</label>
+              											<input type="text" class="form-control" id="psw" placeholder="密碼">
+            										  </div>
+            										  <div class="checkbox">
+              											<label><input type="checkbox" value="" checked>Remember me</label>
+            										  </div>
+          										   </form>	
+        										</div>
+        										<div class="modal-footer">
+        											<button type="submit" class="btn btn-success btn-default pull-left"><span class="glyphicon glyphicon-off"></span> 登入</button>
+         											<button type="button" class="btn btn-danger btn-default pull-right" data-dismiss="modal">忘記密碼</button>
+        										</div>
+     									</div>
+      
+    								</div>
+ 								</div>  
+     							 <li><a href="#">註冊</a></li>     						 
+       						</ul>
+ 						 </div>
+ 					</div>
 				</nav>
 				<!-- Main -->
 					<div id="main">
