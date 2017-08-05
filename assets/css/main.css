@@ -2151,8 +2151,7 @@
 
 		}
 
-
-
+	input[type="username"],
 	input[type="password"],
 	input[type="email"],
 	input[type="tel"],
@@ -2174,7 +2173,7 @@
 		width: 100%;
 	}
 
-		
+		input[type="username"]:invalid,
 		input[type="password"]:invalid,
 		input[type="email"]:invalid,
 		input[type="tel"]:invalid,
@@ -2183,7 +2182,7 @@
 			box-shadow: none;
 		}
 
-		
+		input[type="username"]:focus,
 		input[type="password"]:focus,
 		input[type="email"]:focus,
 		input[type="tel"]:focus,
@@ -3330,10 +3329,9 @@
     border-radius: .25em;
     width: 1em;
     height: 1em;
-	right : 15%; 
-    margin-right: 0;
+    margin-right: .3em;
 	margin-bottom: .1em;
-	
+
 }
 
 .radio .cr {
@@ -3356,6 +3354,7 @@
 .radio label input[type="radio"] {
     display: none;
 	
+	margin-left: 0.5%;
 
 }
 
