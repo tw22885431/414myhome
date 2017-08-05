@@ -3376,3 +3376,10 @@
 .radio label input[type="radio"]:disabled + .cr {
     opacity: .5;
 }
+li.ui-state-default{
+    background:#fff0;
+    border:none;
+    border-bottom:1px solid #ddd;
+    text-align: left;
+    padding-bottom: 10px;
+}

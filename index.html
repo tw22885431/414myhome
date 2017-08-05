@@ -66,11 +66,21 @@
 				
 				color: aliceblue !important;
 				
-				font-size: 45px !important;
+				font-size: 45px ;
 				
 				padding: 20px 50px;
 			
 			}
+            .modal-term .close-term{
+
+                background-color: #DDDDDD;
+
+                color: black ;
+
+                font-size: 40px;
+
+                padding: 20px 50px;
+            }
 			
 			
 			.modal-footer{
@@ -148,7 +158,7 @@
               											<label for="psw"><span class="glyphicon glyphicon-eye-open"></span> 密碼</label>
               											<input type="password" class="form-control" id="psw" placeholder="密碼" required>
             										  </div>
-            										  <div class="row col-md-4 col-md-offset-10 checkbox">  
+            										  <div class="row col-md-4 col-md-offset10 checkbox">  
               											 <label>
             													<input type="checkbox" checked>
             													<span class="cr"><em class="cr-icon glyphicon glyphicon-ok"></em></span>記住我
@@ -164,7 +174,19 @@
       
     								</div>
  								</div>  
-     							 <li><a href="#register" data-toggle = "modal">註冊</a></li>
+     							 <li><a href="#term" data-toggle = "modal">註冊</a></li>
+                                 <div class = "modal fade" id = "term" role = "dialog">
+                                     <div class= "modal-dialog">
+                                         <div class = "modal-content">
+                                             <div class = "modal-term" style = "padding: 20px 50px" >
+                                                 <h5 class = "modal-title text-center text-denger " style= "font-size: 30px">會員條款</h5>
+                                             </div>
+                                             <div class= "modal-body" >
+                                                 
+                                             </div> 
+                                         </div>
+                                     </div>
+                                 </div>
     							  	<div class="modal fade" id="register" role="dialog">
     									<div class="modal-dialog">
      							  		<div class="modal-content">

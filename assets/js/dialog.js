@@ -8,3 +8,13 @@ $(document).ready(function(){
 		$("#register").modal();
 	});
 });
+
+$(document).ready(function(){
+
+    $("#term").click(function(){
+
+        $("#term").modal();
+
+    })
+
+})
