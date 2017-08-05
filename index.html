@@ -60,30 +60,64 @@
 				
 			}
 			
-			.modal-header,h4, .close{
+			.modal-header,h4,.close{
 				
 				background-color:rebeccapurple;
 				
 				color: aliceblue !important;
 				
-				text-align: center !important;
+				font-size: 45px !important;
 				
-				font-size: 30px !important;
+				padding: 20px 50px;
+			
 			}
+			
 			
 			.modal-footer{
 				
 				background: #f9f9f9;
 				
 			}
-			
-			.btn{
-				
-				border: none;
-				
+			.glyph span{
+    		
+				font-size: 40px;
+    		
+				color: white;
+    
+				/* Add the following two lines */
+    
+				line-height: 45px;
+   
+				vertical-align: middle;
+
 			}
+			.glyph2 span{
+				
+				font-size: 16px;
+    		
+				color: black;
+    
+				/* Add the following two lines */
+    
+				line-height: 16px;
+   
+				vertical-align: middle;
+
+			}	
 			
-			
+			.glyphbtn span{
+				
+				font-size: 25px;
+    		
+				color: white;
+    
+				/* Add the following two lines */
+    
+				line-height: 5px;
+   
+				vertical-align:middle;
+
+			}
 			
         </style>
 	</head>
@@ -94,43 +128,77 @@
  					<div class="container-fluid">
   						<div class="collaps navbar-collapse navbar-right">
     						<ul class="nav navbar-nav">
-     							 <li><a href="#myModal" data-toggle = "modal">登入</a></li>
-     							 <div class="modal fade" id="myModal" role="dialog">
+     							 <li><a href="#usrlogin" data-toggle = "modal">登入</a></li>
+     							 <div class="modal fade" id="usrlogin" role="dialog">
     								<div class="modal-dialog">
     
       									<!-- Modal content-->
       									<div class="modal-content">
-        										<div class="modal-header" style="padding: 20px 50px">
-          											<button type="button" class="close" data-dismiss="modal">&times;</button>
-          											<h4><span class="glyphicon glyphicon-lock"></span> 登入</h4>
+        										<div class="modal-header glyph">
+          											<button type="button-fit" class="close" data-dismiss="modal">&times;</button>
+          											<h4 class="modal-title text-center text-danger"><span class="glyphicon glyphicon-lock" ></span>登入</h4>
         										</div>
-        										<div class="modal-body"style = "padding: 40px 50px">
-          								          <form id="form">
-            									      <div class="form-group">
+        										<div class="modal-body glyph2 "style = "padding: 40px 50px">
+          								          <form>
+            									      <div class="form-group ">
               									  		<label for="usrname"><span class="glyphicon glyphicon-user"></span> 帳號</label>
               									  		<input type="text" class="form-control" id="usr" placeholder="用戶名/E-Mail">
             									  	  </div>
-            								    	  <div class="form-group">
+            								    	  <div class="form-group ">
               											<label for="psw"><span class="glyphicon glyphicon-eye-open"></span> 密碼</label>
               											<input type="text" class="form-control" id="psw" placeholder="密碼">
             										  </div>
-            										  	    <div class="checkbox">
-              													<label>
-            														<input type="checkbox" value="" checked>
-            															<span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>Remember me
-       														  </label>
-            										  		</div>
+            										  <div class="checkbox">
+              											 <label style="float: left">
+            													<input type="checkbox" checked>
+            													<span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>記住我
+       													 </label>
+            										  </div>
           										   </form>	
         										</div>
-        										<div class="modal-footer">
+        										<div class="modal-footer glyphbtn">
         											<button type="submit" class="btn btn-success btn-default pull-left"><span class="glyphicon glyphicon-off"></span> 登入</button>
-         											<button type="button" class="btn btn-danger btn-default pull-right" data-dismiss="modal">忘記密碼</button>
+         											<button type="button" class="btn btn-danger btn-default pull-right">忘記密碼</button>
         										</div>
      									</div>
       
     								</div>
  								</div>  
-     							 <li><a href="#">註冊</a></li>     						 
+     							 <li><a href="#register" data-toggle = "modal">註冊</a></li>
+    							  	<div class="modal fade" id="register" role="dialog">
+    									<div class="modal-dialog">
+     							  		<div class="modal-content">
+        									<div class="modal-header" style="padding: 20px 50px" >
+          										<h4 class="modal-title text-center text-danger">註冊</h4>
+        									</div>
+        									<div class="modal-body glyph2"style = "padding: 40px 50px">
+          							    		<form id="form">
+            										<div class="form-group">
+              											<label for="usrname"><span class="glyphicon glyphicon-user"></span> 帳號</label>
+              											<input type="text" class="form-control" id="usr" placeholder="用戶名/E-Mail">
+            										</div>
+            										<div class="form-group">
+              											<label for="psw"><span class="glyphicon glyphicon-eye-open"></span> 密碼</label>
+              											<input type="text" class="form-control" id="psw" placeholder="密碼">
+            										</div>
+            										<div class="form-group">
+              											<label for="psw"><span class="glyphicon glyphicon-eye-open"></span> 密碼確認</label>
+              											<input type="text" class="form-control" id="psw" placeholder="再次輸入密碼">
+            										</div>
+            										<div class= "form-group">
+            											<label for="email"><span class = "glyphicon glyphicon-envelope"></span> 電子信箱</label>
+            											<input type="text" class="form-control" id="email" placeholder="example@yourmail"/>            
+            										</div>           					
+          										</form>	
+        									</div>
+        									<div class="modal-footer glyphbtn">
+        										<button type="submit" class="btn btn-success btn-default pull-left"><span class="glyphicon glyphicon-ok"></span> 確定</button>
+         										<button type="button" class="btn btn-danger btn-default pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> 取消</button>
+        									</div>
+     									</div>
+      
+    								</div>
+ 						    	</div>     						 
        						</ul>
  						 </div>
  					</div>
@@ -159,21 +227,7 @@
 					<footer id="footer">
 						<div class="inner">
 							<section>
-								<h2>連絡我們</h2>   <p>如果有什麼建議</br>或是感想</br>可以在這留路言哦</p>
-								<form method="post" action="#">
-									<div class="field half first">
-										<input type="text" name="name" id="name" placeholder="Name" />
-									</div>
-									<div class="field half">
-										<input type="email" name="email" id="email" placeholder="Email" />
-									</div>
-									<div class="field">
-										<textarea name="message" id="message" placeholder="Message"></textarea>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send" class="special" /></li>
-									</ul>
-								</form>
+								
 							</section>
 							<section>
 								<h2>Follow Us</h2>
