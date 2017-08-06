@@ -13,17 +13,13 @@
 		margin: 0;
 		padding: 0;
 		border: 0;
-		font-size: 100%;
+		font-size: 50%;
 		font: inherit;
 		vertical-align: baseline;
 	}
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
-	}
-
-	body {
-		line-height: 1;
 	}
 
 	ol, ul {
@@ -44,9 +40,6 @@
 		border-spacing: 0;
 	}
 
-	body {
-		-webkit-text-size-adjust: none;
-	}
 
 /* Box Model */
 
@@ -3383,3 +3376,4 @@ li.ui-state-default{
     text-align: left;
     padding-bottom: 10px;
 }
+
